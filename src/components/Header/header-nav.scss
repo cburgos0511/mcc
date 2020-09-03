@@ -1,0 +1,44 @@
+@import '../../styles/config/config';
+
+.nav {
+    position: relative;
+
+        @include media-query($medium-down) {
+            position: fixed;
+                top: 0;
+                left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(var(--color-white),0.6);
+            pointer-events: none;
+            padding: 24px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            backdrop-filter: blur(10px);
+            z-index: 9;
+            opacity: 0;
+
+            &.open {
+                pointer-events: auto;
+            }
+        }
+
+        @include media-query($large-up) {
+            grid-column: 2/3;
+            place-self: center;
+            pointer-events: auto;
+        }
+
+    &__item {
+        font-family: var(--montserrat);
+        font-weight: 700;
+        font-size: 14px;
+        color: var(--color-black);
+        letter-spacing: 2.22px;
+        text-align: left;
+        text-transform: uppercase;
+        margin: 24px;
+    }
+}

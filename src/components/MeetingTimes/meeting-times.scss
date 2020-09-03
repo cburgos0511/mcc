@@ -1,0 +1,92 @@
+@import '../../styles/config/config';
+
+
+.meeting-times {
+    width: 100%;
+    background: var(--color-tan);
+    padding: 72px 24px;
+
+    @include media-query($large-up) {
+        padding: 72px 64px;
+    }
+
+    &__wrapper {
+
+        @include media-query($large-up) {
+            max-width: 1400px;
+            margin-left: auto;
+        }
+    }
+
+    &__header {
+        text-align: right;
+
+        @include media-query($medium-up) {
+            text-align: left;
+            margin-left: 116px;
+        }
+
+        h3 {
+            position: relative;
+            display: inline-block;
+
+            &::before {
+                content: '';
+                position: absolute;
+                    top: 50%;
+                    left: -112px;
+                width: 88px;
+                height: 2px;
+                background: var(--color-black);
+            }
+        }
+    }
+
+    &__body {
+
+        @include media-query($medium-up) {
+            display: flex;
+            justify-content: space-around;
+        }
+
+        @include media-query($large-up) {
+            justify-content: flex-end;
+            margin-top: 138px;
+        }
+    }
+}
+
+.meeting-day {
+    width: 100%;
+    max-width: 320px;
+    margin-bottom: 40px;
+
+    @include media-query($large-up) {
+        &:first-of-type {
+            margin-right: 96px;
+        }
+    }
+
+    &__header {
+        font-family: var(--playfair);
+        font-size: 24px;
+        font-weight: 700;
+        border-bottom: 1px solid var(--color-black);
+        padding-bottom: 8px;
+    }
+
+    &__time {
+
+        span {
+            display: block;
+            font-size: 14px;
+            margin: 8px 0;
+        }
+
+        strong {
+            font-family: var(--playfair);
+            font-size: 16px;
+            text-transform: uppercase;
+        }
+    }
+}

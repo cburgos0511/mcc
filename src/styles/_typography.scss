@@ -1,0 +1,45 @@
+
+
+p {
+    @include fluid-type($min-width, $max-width, 16px, 18px );
+    @include fluid-line($min-width, $max-width, 24px, 26px);
+    @include fluid-letter($min-width, $max-width, 0.27px, 0.3px);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    font-family: var(--playfair);
+    font-weight: 700;
+}
+
+h1 {
+    @include fluid-type($min-width, $max-width, 40px, 60px );
+    @include fluid-line($min-width, $max-width, 42px, 62px);
+}
+
+h2 {
+    @include fluid-type($min-width, $max-width, 28px, 60px );
+    @include fluid-line($min-width, $max-width, 36px, 48px);
+}
+
+h3 {
+    @include fluid-type($min-width, $max-width, 28px, 36px );
+    @include fluid-line($min-width, $max-width, 37px, 48px);
+}
+
+h4 {
+    font-size: 14px;
+    line-height: 19px;
+}
+
+blockquote {
+    font-family: var(--playfair);
+    @include fluid-type($min-width, $max-width, 21px, 28px );
+    @include fluid-line($min-width, $max-width, 28px, 45px);
+}
+
+a {
+    text-decoration: none;
+}
