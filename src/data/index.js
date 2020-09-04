@@ -4,7 +4,7 @@ const pages = [
     {
         id: '5258d430-d729-44b1-96ad-484c00def05d',
         name: 'home',
-        uid: 'home',
+        uid: '/',
         data: home,
     },
     {

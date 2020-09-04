@@ -1,0 +1,26 @@
+@import '../../styles/config/config';
+
+.footer {
+    padding: 50px 0;
+    height: 52vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(0, 0, 0, 0.901);
+
+    &__info {
+        p {
+            color: var(--color-white);
+            text-align: center;
+            font-family: var(--montserrat);
+            letter-spacing: 1.2px;
+            font-size: 16px;
+        }
+
+        &__address {
+            opacity: 0.6;
+            width: 180px;
+            margin: 0 auto 32px auto;
+        }
+    }
+}
