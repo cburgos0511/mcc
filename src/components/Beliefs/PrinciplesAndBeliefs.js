@@ -3,13 +3,11 @@ import PrincipleAndBelief from './PrincipleAndBelief'
 import s from './principle.scss'
 
 const PrinciplesAndBeliefs = ({ principles }) => {
-    console.log(principles)
-
     return (
         <div className={s.container}>
             {principles.map((principle, index) => (
                 <PrincipleAndBelief
-                    key={principle.id}
+                    key={index}
                     principle={principle}
                     number={index + 1}
                 />

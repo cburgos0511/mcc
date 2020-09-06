@@ -8,7 +8,7 @@ export const FooterNav = ({ items }) => {
             {items.map((item, index) => (
                 <TransitionLink
                     to={item.slug}
-                    key={item.key}
+                    key={index}
                     className={s.nav__items}
                 >
                     {item.name}

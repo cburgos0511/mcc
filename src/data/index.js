@@ -28,7 +28,7 @@ const pages = [
         uid: 'articles',
     },
     {
-        id: '2836aafa-6433-4425-b908-ffra75b3e84f',
+        id: 'e1743f48-f086-11ea-adc1-0242ac120002',
         name: 'login',
         uid: 'http://messages.millardcommunitychurch.com/',
     },
