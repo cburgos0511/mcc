@@ -1,5 +1,4 @@
 import React, { useState, useRef, createRef, useEffect } from 'react'
-import TransitionLink from 'gatsby-plugin-transition-link'
 import { gsap } from 'gsap'
 import Logo from '../../assets/svg/mcc-type.svg'
 import HeaderNav from './HeaderNav'
@@ -62,12 +61,12 @@ const Header = () => {
                 .pause()
             gsap.set([navRef.current, itemsRefs], { clearProps: 'all' })
         }
-    }, [isSmallScreen])
+    }, [isSmallScreen, items, menuTL])
 
     //Run menuTL base on Menu State
     useEffect(() => {
         menuTL.reversed(!isMenuOpen)
-    }, [isMenuOpen])
+    }, [isMenuOpen, menuTL])
 
     //ScrollLock the body when the menu is open
     useScrollLock(isMenuOpen)

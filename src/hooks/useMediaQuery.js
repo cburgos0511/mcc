@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 const useMediaQuery = mediaQuery => {
     const [state, setState] = useState(false)
@@ -19,7 +19,7 @@ const useMediaQuery = mediaQuery => {
         return () => {
             theMediaQuery.removeListener(handleMediaQueryChange)
         }
-    }, [])
+    }, [mediaQuery])
 
     return state
 }

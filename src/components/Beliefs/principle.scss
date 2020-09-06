@@ -1,0 +1,48 @@
+@import '../../styles/config/config';
+
+.container {
+    margin: 16px;
+    @include media-query($medium-up) {
+        margin: 165px;
+    }
+}
+
+.principle__wrapper {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+
+    border-top: 1px solid var(--color-n3);
+    margin-top: 64px;
+    @include media-query($medium-up) {
+        grid-template-columns: 1fr 1fr;
+        grid-gap: 150px;
+        padding: 50px 0;
+    }
+
+    div {
+        .number {
+            color: var(--color-n3);
+            font-size: 24px;
+            margin: 32px 0 0 0;
+        }
+
+        .principle {
+            // margin: 0 0 24px;
+            // width: 490px;
+            font-size: 32px;
+        }
+
+        .scripture {
+            margin: 0;
+            font-size: 14px;
+            color: var(--color-red);
+        }
+    }
+}
+
+.paragraph {
+    @include media-query($medium-up) {
+        line-height: 31px;
+    }
+}

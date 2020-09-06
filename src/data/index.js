@@ -27,6 +27,12 @@ const pages = [
         name: 'articles',
         uid: 'articles',
     },
+    {
+        id: 'e1743f48-f086-11ea-adc1-0242ac120002',
+        name: 'login',
+        uid: 'http://messages.millardcommunitychurch.com/',
+    },
 ]
 
 export default pages
+//http://messages.millardcommunitychurch.com/
