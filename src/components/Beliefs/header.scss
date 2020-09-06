@@ -1,11 +1,14 @@
 @import '../../styles/config/config';
 
-.hero {
+.header {
     position: relative;
     display: grid;
     width: 100%;
     grid-template-rows: 1fr;
     grid-template-columns: 1fr;
+    @include media-query($medium-up) {
+        margin-bottom: 225px;
+    }
 
     &__wrapper {
         grid-column: 1/2;
@@ -22,36 +25,29 @@
     }
 }
 
-.hero-img {
-    grid-column: 1/2;
-    grid-row: 1/2;
-    overflow-y: hidden;
-
-    .gatsby-image-wrapper {
-        width: 100%;
-        height: 100%;
-        overflow-y: hidden;
-    }
-}
-
-.home-hero-content {
+.header-content {
     position: relative;
     width: 100%;
     max-width: 790px;
     grid-column: 1 / 2;
     grid-row: 1 / 2;
     display: grid;
-    place-items: center;
     align-content: start;
 
-    h1 {
-        @include media-query($large-up) {
-            margin-bottom: 50vh;
-        }
+    @include media-query($medium-up) {
+        place-items: center;
     }
 
-    p {
-        width: 100%;
-        max-width: 525px;
+    h4 {
+        margin: 0;
+        font-family: var(--montserrat);
+        letter-spacing: 1.1px;
+        color: var(--color-black);
+        opacity: 0.2;
+        font-weight: 400;
+    }
+
+    h1 {
+        margin: 16px 0;
     }
 }
