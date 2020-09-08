@@ -15,7 +15,7 @@ const pages = [
     {
         id: '94596dd2-3e95-4587-bdfd-4f48af31b06d',
         name: 'messages',
-        uid: 'messages',
+        uid: 'http://messages.millardcommunitychurch.com/',
     },
     {
         id: '2fa83d93-e460-4298-a07d-70d0b3642397',
@@ -30,7 +30,7 @@ const pages = [
     {
         id: 'e1743f48-f086-11ea-adc1-0242ac120002',
         name: 'login',
-        uid: 'http://messages.millardcommunitychurch.com/',
+        uid: 'login',
     },
 ]
 

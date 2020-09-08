@@ -74,8 +74,24 @@ module.exports = {
                 icon: `src/images/gatsby-icon.png`, // This path is relative to the root of the site.
             },
         },
+        {
+            resolve: 'gatsby-source-googlemaps-geocoding',
+            options: {
+                key: 'AIzaSyAQTy5W2_46KgjaqDbR_MJHyLSx0nR-s70',
+                address: '12656 Weir St, Omaha, NE 68137',
+            },
+        },
+        // {
+        //     resolve: `@ccalamos/gatsby-source-googlemaps-static`,
+        //     options: {
+        //         key: `AIzaSyAQTy5W2_46KgjaqDbR_MJHyLSx0nR-s70`,
+        //         center: `Chicago, IL`,
+        //     },
+        // },
+
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
     ],
 }
+//
