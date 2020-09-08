@@ -5,7 +5,8 @@ const ContactForm = () => {
     return (
         <div className={s.container}>
             <form
-                name="contact"
+                onSubmit={e => e.preventDefault()}
+                name="contact-form"
                 method="post"
                 data-netlify="true"
                 data-netlify-honey="bot-field"
@@ -25,7 +26,7 @@ const ContactForm = () => {
                     <textarea name="message" type="text" rows="16" />
                 </div>
 
-                <button>Send</button>
+                <button type="submit">Send</button>
             </form>
         </div>
     )
