@@ -1,0 +1,20 @@
+@import '../../styles/config/config';
+
+.contactContainer {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin-bottom: 201px;
+    grid-gap: 100px;
+    padding: 0 6px;
+
+    @include media-query($medium) {
+        padding: 0 80px;
+    }
+
+    @include media-query($large-up) {
+        grid-gap: 10vw;
+        padding: 0 10%;
+        grid-template-columns: 1fr 1fr;
+    }
+}
