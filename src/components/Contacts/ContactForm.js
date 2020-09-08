@@ -31,7 +31,14 @@ const ContactForm = () => {
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: encode({ 'form-name': 'mcc-contact-form', ...formInput }),
         })
-            .then(() => alert('Success!'))
+            .then(() => {
+                setFormInput({
+                    name: '',
+                    email: '',
+                    message: '',
+                })
+                alert('Success!')
+            })
             .catch(err => alert(err))
         e.preventDefault()
     }
