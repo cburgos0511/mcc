@@ -13,11 +13,7 @@ const PrincipleAndBelief = ({ principle, number }) => {
             </div>
             <div>
                 {principle.belief.split('\n').map((paragraph, key) => {
-                    return (
-                        <p className={s.paragraph} key={key}>
-                            {paragraph}
-                        </p>
-                    )
+                    return <p className={s.paragraph}>{paragraph}</p>
                 })}
             </div>
         </div>

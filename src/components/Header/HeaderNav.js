@@ -8,17 +8,15 @@ const HeaderNav = React.forwardRef(({ items, isMenuOpen, toggleNav }, ref) => {
     return (
         <nav className={`${s.nav} ${openClass}`} ref={ref}>
             {items.map((item, index) => (
-                <>
-                    <TransitionLink
-                        to={item.slug}
-                        key={item.id}
-                        className={`${s.nav__item}`}
-                        ref={items[index].ref}
-                        onClick={() => toggleNav()}
-                    >
-                        {item.name}
-                    </TransitionLink>
-                </>
+                <TransitionLink
+                    to={item.slug}
+                    key={item.id}
+                    className={`${s.nav__item}`}
+                    ref={items[index].ref}
+                    onClick={() => toggleNav()}
+                >
+                    {item.name}
+                </TransitionLink>
             ))}
         </nav>
     )

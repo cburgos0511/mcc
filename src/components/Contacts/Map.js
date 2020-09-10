@@ -1,11 +1,9 @@
 import React from 'react'
 import s from './map.scss'
-import { graphql, useStaticQuery } from 'gatsby'
+// import { graphql, useStaticQuery } from 'gatsby'
 import GoogleMapReact from 'google-map-react'
 
 const Marker = ({ text, $hover }) => {
-    console.log($hover)
-
     const style = $hover ? s.markerScale : s.marker
 
     return <div className={style}></div>
