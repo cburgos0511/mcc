@@ -1,12 +1,13 @@
-import React, { useState } from 'react'
+import React from 'react'
 import s from './form.scss'
+import useFormValidation from '../../hooks/useFormValidation'
+import validation from '../../helper/validation'
 
 const ContactForm = () => {
-    const [formInput, setFormInput] = useState({
-        name: '',
-        email: '',
-        message: '',
-    })
+    const { state, handleChange, onSubmit, errors } = useFormValidation(
+        handleSubmit,
+        validation
+    )
 
     const encode = data => {
         return Object.keys(data)
@@ -18,34 +19,23 @@ const ContactForm = () => {
             )
             .join('&')
     }
-    const handleChange = e => {
-        setFormInput({
-            ...formInput,
-            [e.target.name]: e.target.value,
-        })
-    }
 
-    const handleSubmit = e => {
+    function handleSubmit(e) {
+        e.preventDefault()
         fetch('/', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-            body: encode({ 'form-name': 'mcc-contact-form', ...formInput }),
+            body: encode({ 'form-name': 'mcc-contact-form', ...state }),
         })
             .then(() => {
-                setFormInput({
-                    name: '',
-                    email: '',
-                    message: '',
-                })
                 alert('Success!')
             })
             .catch(err => alert(err))
-        e.preventDefault()
     }
     return (
         <div className={s.container}>
             <form
-                onSubmit={handleSubmit}
+                onSubmit={onSubmit}
                 name="mcc-contact-form"
                 method="post"
                 data-netlify="true"
@@ -61,10 +51,17 @@ const ContactForm = () => {
                 <div className={s.form__wrap}>
                     <label htmlFor="name">Name</label>
                     <input name="name" type="text" onChange={handleChange} />
+                    {errors.name && (
+                        <span className={s.error}>*{errors.name}</span>
+                    )}
                 </div>
+
                 <div className={s.form__wrap}>
                     <label htmlFor="email">Email</label>
                     <input name="email" type="text" onChange={handleChange} />
+                    {errors.email && (
+                        <span className={s.error}>*{errors.email}</span>
+                    )}
                 </div>
                 <div className={s.form__wrap}>
                     <label htmlFor="message">Message</label>
@@ -74,6 +71,9 @@ const ContactForm = () => {
                         rows="16"
                         onChange={handleChange}
                     />
+                    {errors.email && (
+                        <span className={s.error}>*{errors.message}</span>
+                    )}
                 </div>
 
                 <button type="submit">Send</button>
