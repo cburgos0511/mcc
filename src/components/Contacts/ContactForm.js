@@ -96,7 +96,9 @@ const ContactForm = () => {
                             />
                         </div>
 
-                        <button type="submit">Send</button>
+                        <button className={s.button} type="submit">
+                            Send
+                        </button>
                     </Form>
                 )}
             </Formik>
