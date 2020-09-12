@@ -1,9 +1,8 @@
 import React from 'react'
-import articles from '../../data/articles'
 import Article from './Article'
 import s from './article.scss'
 
-const Articles = () => {
+const Articles = ({ articles }) => {
     return (
         <div className={s.container}>
             {articles.map(article => (

@@ -1,12 +1,18 @@
 @import '../../styles/config/config';
 
 .header {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 72px;
-    // background: $white;
-    // box-shadow: 0 5px 30px 0 rgba(0,0,0,0.20);
+    background: var(--color-white);
+    box-shadow: 0 5px 30px 0 rgba(0, 0, 0, 0.2);
     z-index: 99;
+
+    @include media-query($large-up) {
+        background: none;
+        box-shadow: none;
+        position: absolute;
+    }
 
     &__wrapper {
         position: relative;

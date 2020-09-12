@@ -5,7 +5,7 @@ const PrincipleAndBelief = ({ principle, number }) => {
     return (
         <div className={s.principle__wrapper}>
             <div>
-                <h1 className={s.number}>0{number}</h1>
+                <p className={s.number}>0{number}</p>
                 <h3 className={s.principle}>{principle.principle}</h3>
                 {principle.supporting_scripture.map((scripture, index) => (
                     <p className={s.scripture}>{scripture}</p>

@@ -16,7 +16,7 @@
     margin-top: 64px;
     @include media-query($medium-up) {
         grid-template-columns: 1fr 1fr;
-        grid-gap: 150px;
+        grid-gap: 20px;
         padding: 50px 0;
     }
 
@@ -25,12 +25,15 @@
             color: var(--color-n3);
             font-size: 24px;
             margin: 32px 0 0 0;
+            font-family: var(--playfair);
         }
 
         .principle {
-            // margin: 0 0 24px;
-            // width: 490px;
-            font-size: 32px;
+            font-size: 24px;
+            margin: 8px 0 12px 0;
+            @include media-query($medium-up) {
+                width: 400px;
+            }
         }
 
         .scripture {
@@ -43,6 +46,6 @@
 
 .paragraph {
     @include media-query($medium-up) {
-        line-height: 31px;
+        line-height: 26px;
     }
 }

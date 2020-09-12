@@ -27,7 +27,7 @@ const pages = [
     {
         id: '2836aafa-6733-4b25-a908-ffca75b3e84f',
         name: 'articles',
-        uid: 'articles',
+        uid: '/articles',
     },
     {
         id: 'e1743f48-f086-11ea-adc1-0242ac120002',

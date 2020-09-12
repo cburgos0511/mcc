@@ -11,38 +11,37 @@ Colors, Typography, Border-Radi, Transitions, CSS Grid
 :root {
     //** Colors ** //
     //primary - named colors, font colors, etc.
-    --color-tan: #E7E4DF;
-    --color-red: #E44652;
-
+    --color-tan: #e7e4df;
+    --color-red: #e44652;
 
     //black & white
     --color-black: #000000;
-    --color-white: #FFFFFF;
+    --color-white: #ffffff;
 
     //neutral
-    --color-n1: #F8F8F8;
-    --color-n2: #EEF2F3;
-    --color-n3: #E0E6E8;
-    --color-n4: #C5D0D3;
-    --color-n5: #9FA9AC;
-    --color-n6: #626C70;
-    --color-n7: #2F3739;
+    --color-n1: #f8f8f8;
+    --color-n2: #eef2f3;
+    --color-n3: #e0e6e8;
+    --color-n4: #c5d0d3;
+    --color-n5: #9fa9ac;
+    --color-n6: #626c70;
+    --color-n7: #2f3739;
 
     //State Colors//
     //success
     --color-success: #88c559;
-    --color-success-light: lighten( var(--color-success), 10% );
-    --color-success-dark: darken( var(--color-success), 10% );
+    --color-success-light: lighten(var(--color-success), 10%);
+    --color-success-dark: darken(var(--color-success), 10%);
 
     //error
     --color-error: #e02447;
-    --color-error-light: lighten( var(--color-error), 10% );
-    --color-error-dark: darken( var(--color-error), 10% );
+    --color-error-light: lighten(var(--color-error), 10%);
+    --color-error-dark: darken(var(--color-error), 10%);
 
     //warning
     --color-warning: #ffd138;
-    --color-warning-light: lighten( var(--color-warning), 10% );
-    --color-warning-dark: lighten( var(--color-warning), 10% );
+    --color-warning-light: lighten(var(--color-warning), 10%);
+    --color-warning-dark: lighten(var(--color-warning), 10%);
 
     //** Border-Radi **//
     --radius-sm: 4px;
@@ -74,10 +73,12 @@ Colors, Typography, Border-Radi, Transitions, CSS Grid
 //Normalize Box Sizing
 html {
     box-sizing: border-box;
-    font-size: var(--font-base-size)
+    font-size: var(--font-base-size);
 }
 
-*, *:before, *:after {
+*,
+*:before,
+*:after {
     box-sizing: inherit;
 }
 
@@ -91,6 +92,11 @@ body {
 body {
     font-family: var(--montserrat);
     font-weight: 400;
+    overflow: visible !important;
+}
+
+.active {
+    color: blue;
 }
 
 :global(.cta) {

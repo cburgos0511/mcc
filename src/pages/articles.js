@@ -1,15 +1,15 @@
 import React from 'react'
-
 import SEO from '../components/Seo'
 import Header from '../components/Beliefs/Header'
 import Articles from '../components/Articles'
+import articles from '../data/articles'
 
-const SecondPage = () => (
+const articlesPage = () => (
     <>
         <SEO title="Articles" />
         <Header subtitle="FURTHER YOUR UNDERSTANDING" title="Articles" />
-        <Articles />
+        <Articles articles={articles} />
     </>
 )
 
-export default SecondPage
+export default articlesPage
