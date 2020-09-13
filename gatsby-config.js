@@ -81,17 +81,18 @@ module.exports = {
                 address: '12656 Weir St, Omaha, NE 68137',
             },
         },
-        // {
-        //     resolve: `@ccalamos/gatsby-source-googlemaps-static`,
-        //     options: {
-        //         key: `AIzaSyAQTy5W2_46KgjaqDbR_MJHyLSx0nR-s70`,
-        //         center: `Chicago, IL`,
-        //     },
-        // },
+        {
+            resolve: `gatsby-source-podcast-rss-feed`,
+            options: {
+                feedURL: `https://anchor.fm/s/121a932c/podcast/rss`,
+                id: 'guid',
+            },
+        },
 
         // this (optional) plugin enables Progressive Web App + Offline functionality
         // To learn more, visit: https://gatsby.dev/offline
         // `gatsby-plugin-offline`,
     ],
 }
-//
+
+// url: ``

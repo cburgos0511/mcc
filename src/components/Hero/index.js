@@ -4,7 +4,7 @@ import Img from 'gatsby-image'
 import s from './hero.scss'
 
 const HERO_IMG_QUERY = graphql`
-    query MyQuery {
+    query {
         heroImage: file(relativePath: { eq: "home-hero.jpg" }) {
             childImageSharp {
                 fluid {

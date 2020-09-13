@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>Play Btn</title>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Podcast/list/desktop" transform="translate(0.000000, -9.000000)">
+            <g id="Play-Btn" transform="translate(0.000000, 9.000000)">
+                <rect id="Rectangle" stroke="#0D1010" x="0.5" y="0.5" width="59" height="59"></rect>
+                <path d="M37.5466667,28.621697 L23.3244444,18.1489898 C23.0488889,17.9465175 22.7128889,17.951172 22.4408889,18.1582989 C22.1671111,18.367753 22,18.749425 22,19.1636788 L22,40.1090931 C22,40.5233469 22.1671111,40.9050189 22.4408889,41.114473 C22.5795556,41.2192001 22.7342222,41.2727273 22.8888889,41.2727273 C23.0382222,41.2727273 23.1893333,41.2238546 23.3244444,41.1237821 L37.5466667,30.6510749 C37.8257778,30.443948 38,30.0576215 38,29.6363859 C38,29.2151504 37.8257778,28.8288239 37.5466667,28.621697 Z" id="Path" fill="#0D1010" fill-rule="nonzero"></path>
+            </g>
+        </g>
+    </g>
+</svg>

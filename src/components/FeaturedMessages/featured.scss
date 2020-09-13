@@ -1,0 +1,24 @@
+@import '../../styles/config/config';
+
+.feature {
+    margin: 2% 1rem 30% 1rem;
+
+    @include media-query($medium-up) {
+        margin: 0 10% 4rem 10%;
+    }
+
+    @include media-query($large-up) {
+        margin: 50vh 20% 20vh 20%;
+    }
+
+    &__h1 {
+        font-size: 28px;
+        margin: 0em;
+        padding-bottom: 8px;
+        border-bottom: 3px solid var(--color-black);
+
+        @include media-query($medium-up) {
+            font-size: 36px;
+        }
+    }
+}
