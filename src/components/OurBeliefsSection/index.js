@@ -18,7 +18,6 @@ const HERO_IMG_QUERY = graphql`
 
 const HomeBeliefs = ({ data }) => {
     const image = useStaticQuery(HERO_IMG_QUERY)
-
     return (
         <section className={`${s.homeBeliefs}`}>
             <div className={s.homeBeliefs__img}>

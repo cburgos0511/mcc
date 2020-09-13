@@ -1,6 +1,5 @@
 import React from 'react'
 import s from './header.scss'
-import articles from '../../data/articles'
 
 const Header = ({ subtitle, title }) => {
     return (

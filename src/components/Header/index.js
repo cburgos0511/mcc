@@ -26,6 +26,27 @@ const Header = () => {
             }
         })
     )
+    const handleScroll = () => {
+        if (
+            document.body.scrollTop > 50 ||
+            document.documentElement.scrollTop > 50
+        ) {
+            document.getElementById('header').style.background = '#fff'
+            document.getElementById('header').style.boxShadow =
+                '0 5px 30px 0 rgba(0, 0, 0, 0.2)'
+        } else {
+            document.getElementById('header').style.background = 'transparent'
+            document.getElementById('header').style.boxShadow =
+                '0 0 0 0 transparent'
+        }
+    }
+
+    useEffect(() => {
+        if (isSmallScreen) {
+            window.addEventListener('scroll', handleScroll)
+            return () => window.removeEventListener('scroll', handleScroll)
+        }
+    })
 
     //Setup a timeline to use
     const [menuTL] = useState(
@@ -76,7 +97,7 @@ const Header = () => {
     }
 
     return (
-        <header className={s.header}>
+        <header id="header" className={s.header}>
             <div className={s.header__wrapper}>
                 <div className={s.header__logo}>
                     <Logo />
