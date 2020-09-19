@@ -5,10 +5,18 @@ import s from './article.scss'
 const Article = ({ article }) => {
     return (
         <div className={s.article}>
-            <TransitionLink to={article.link} className={s.linkWrap}>
-                <h1>{article.title}</h1>
-                <p>{article.description}</p>
-            </TransitionLink>
+            {!article.resource ? (
+                <TransitionLink to={article.link} className={s.linkWrap}>
+                    <h1>{article.title}</h1>
+                    <p>{article.description}</p>
+                </TransitionLink>
+            ) : (
+                <a target="_blank" href={article.link} className={s.linkWrap}>
+                    <h1>{article.title}</h1>
+                    <p>{article.description}</p>
+                </a>
+            )}
+
             <div className={s.info}>
                 <p className={s.author}>{article.author}</p>
                 <div className={s.divider} />
