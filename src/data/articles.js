@@ -3,10 +3,11 @@ const articles = [
         id: '56e65564-f23e-11ea-adc1-0242ac120002',
         title: 'Church Collection',
         author: 'John Malone',
-        link: '/',
+        link: '/article/church-collection',
         description:
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving. Great Aunt Carol’s late arrival with her apple pies in hand. My grandmother brewing a pot of decaf coffee. ',
         date_published: 'Apr 1, 1999',
+        resource: false,
     },
     {
         id: '56e657d0-f23e-11ea-adc1-0242ac120102',
@@ -14,8 +15,9 @@ const articles = [
         author: 'John Malone',
         description:
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving. Great Aunt Carol’s late arrival with her apple pies in hand. My grandmother brewing a pot of decaf coffee. ',
-        link: '/',
+        link: '/article/three-resurrections',
         date_published: 'Apr 1, 1999',
+        resource: false,
     },
     {
         id: '56e65b4a-f23e-11ea-adc1-0242ac190002',
@@ -23,8 +25,9 @@ const articles = [
         author: 'John Malone',
         description:
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving.',
-        link: '/',
+        link: '/articles/owh-evolution',
         date_published: 'Apr 1, 1999',
+        resource: false,
     },
     {
         id: '56e657d0-f23e-11ea-adc1-0222ac120002',
@@ -32,8 +35,9 @@ const articles = [
         author: 'John Malone',
         description:
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving.',
-        link: '/',
+        link: '/article/christian-judgment',
         date_published: 'Apr 1, 1999',
+        resource: false,
     },
     {
         id: '56e65c30-f23e-11ea-adc1-0242ac120402',
@@ -41,8 +45,9 @@ const articles = [
         author: 'John Malone',
         description:
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving. Great Aunt Carol’s late arrival with her apple pies in hand. My grandmother brewing a pot of decaf coffee. ',
-        link: '/',
+        link: '/wwjd',
         date_published: 'Apr 1, 1999',
+        resource: false,
     },
     {
         id: '6e65d02-f23e-11ea-adc1-0242ac220002',
@@ -52,6 +57,7 @@ const articles = [
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving. Great Aunt Carol’s late arrival with her apple pies in hand. My grandmother brewing a pot of decaf coffee. ',
         link: '/',
         date_published: 'Apr 1, 1999',
+        resource: true,
     },
     {
         id: '56e65dd4-f23e-11ea-adc1-0242ac160002',
@@ -61,15 +67,17 @@ const articles = [
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving.',
         link: '/',
         date_published: 'Apr 1, 1999',
+        resource: true,
     },
     {
         id: '56e65e9c-f23e-11ea-adc1-0242ac120002',
-        title: 'Modern Toungues Movement (G.H. Lang)',
+        title: 'Modern Tongues Movement (G.H. Lang)',
         author: 'John Malone',
         description:
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving.',
-        link: '/',
+        link: '/article/tongues-movement',
         date_published: 'Apr 1, 1999',
+        resource: false,
     },
 ]
 
