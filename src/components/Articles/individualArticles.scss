@@ -103,8 +103,10 @@
                     top: 36px;
                     right: 26px;
 
-                    @include media-query($large-down) {
+                    @include media-query($medium-down) {
                         font-size: 12px;
+                        top: -4px;
+                        right: 6px;
                     }
                 }
             }

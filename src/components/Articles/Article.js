@@ -11,7 +11,12 @@ const Article = ({ article }) => {
                     <p>{article.description}</p>
                 </TransitionLink>
             ) : (
-                <a target="_blank" href={article.link} className={s.linkWrap}>
+                <a
+                    target="_blank"
+                    href={article.link}
+                    rel="noreferrer"
+                    className={s.linkWrap}
+                >
                     <h1>{article.title}</h1>
                     <p>{article.description}</p>
                 </a>

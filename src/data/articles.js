@@ -60,14 +60,34 @@ const articles = [
         resource: true,
     },
     {
-        id: '56e65dd4-f23e-11ea-adc1-0242ac160002',
-        title: 'Biblical Timelines',
+        id: '56e65dd4-f23e-11ea-adc1-0242ac02j002',
+        title: 'Adam To Christ',
         author: 'John Malone',
         description:
             'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving.',
-        link: '/',
+        link: '/article/adam-to-christ',
         date_published: 'Apr 1, 1999',
-        resource: true,
+        resource: false,
+    },
+    {
+        id: '56e65dd4-f23e-1mqa-adc1-0242ac160002',
+        title: 'History of Man',
+        author: 'John Malone',
+        description:
+            'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving.',
+        link: '/article/history-of-man',
+        date_published: 'Apr 1, 1999',
+        resource: false,
+    },
+    {
+        id: '56e65dd4-fh4e-11ea-adc1-0242ac160002',
+        title: 'Daniel Seventy Weeks',
+        author: 'John Malone',
+        description:
+            'The nostalgia of eating is my main ingredient. The smells that fill the house on Thanksgiving.',
+        link: '/article/daniel-seventy-weeks',
+        date_published: 'Apr 1, 1999',
+        resource: false,
     },
     {
         id: '56e65e9c-f23e-11ea-adc1-0242ac120002',
