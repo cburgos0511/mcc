@@ -1,7 +1,7 @@
 import pdf from '../../assets/Lang_TonguesMovement.pdf'
 import s from '../../components/Articles/individualArticles.scss'
 import React, { useState, useEffect } from 'react'
-import { Document, Page, pdfjs, PDFDownloadLink } from 'react-pdf'
+import { Document, Page, pdfjs } from 'react-pdf'
 import gsap from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
@@ -95,7 +95,6 @@ const TonguesMovement = () => {
                         ></i>
                     </div>
                 </div>
-                <div className={s.actions}></div>
             </div>
         </main>
     )
