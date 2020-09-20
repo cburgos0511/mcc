@@ -61,7 +61,6 @@ const Timeline = ({
                             <i
                                 aria-label="previous"
                                 role="button"
-                                tabIndex="-1"
                                 className={s.lchevron__left}
                                 onClick={currentPage <= 1 ? null : previousPage}
                             ></i>
@@ -89,7 +88,6 @@ const Timeline = ({
                         >
                             <i
                                 role="button"
-                                tabIndex="-2"
                                 aria-label="next"
                                 className={s.rchevron__right}
                                 onClick={

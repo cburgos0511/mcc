@@ -57,9 +57,8 @@
         text-align: center;
         padding: 10px;
         outline: none;
-        height: 50px;
-        border: none;
-        padding: auto;
+        height: 50px !important;
+        padding: 6px !important;
         color: var(--color-red);
         text-transform: uppercase;
         font-weight: 800;
