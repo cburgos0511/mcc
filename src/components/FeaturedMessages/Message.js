@@ -1,11 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './message.scss'
 import PlayButton from '../../assets/svg/play-btn.svg'
 
-const Message = ({ speaker, published, title }) => {
+const Message = ({ speaker, published, title, url, onHandlePlayer }) => {
     return (
         <div className={s.message}>
-            <div className={s.message__logo}>
+            <div
+                className={s.message__logo}
+                onClick={() => onHandlePlayer(url)}
+            >
                 <PlayButton />
             </div>
             <p className={s.message__wrapper__title}>{title}</p>

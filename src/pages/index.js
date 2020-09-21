@@ -16,7 +16,10 @@ const query = graphql`
                     item {
                         creator
                         title
-                        isoDate(formatString: "MMM DD, YYYY")
+                        isoDate(formatString: "MMM DD YYYY")
+                        enclosure {
+                            url
+                        }
                     }
                 }
             }

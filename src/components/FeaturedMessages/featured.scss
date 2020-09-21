@@ -22,3 +22,23 @@
         }
     }
 }
+
+.player {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+
+    &__inner {
+        height: 80px;
+        outline: 'none';
+    }
+}
+
+.close {
+    position: absolute;
+    width: 12px;
+    cursor: pointer;
+    right: 16px;
+    top: 4px;
+}
