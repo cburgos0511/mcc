@@ -1,8 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
 import s from './form.scss'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
 const ContactForm = ({ bucketItems }) => {
+    const [bucket, setBucket] = useState({})
+    // [
+    //     { raffle: 10, item: 'shirt', name: 'Sceptre' },
+    //     { raffle: 7, item: 'hat', name: 'Yumm' },
+    //     { raffle: 5, item: 'shirt', name: 'Cowin' },
+    // ]
+
+    const cleanArray = bucketItems
+        .map((item, i) => `${item.raffle} ${item.item} from ${item.name}`)
+        .join('\n')
+    console.log(cleanArray)
+
     const encode = data => {
         return Object.keys(data)
             .map(
@@ -13,9 +25,11 @@ const ContactForm = ({ bucketItems }) => {
             )
             .join('&')
     }
+
     return (
         <div className={s.container}>
             <h1 className={s.title}>Leave us a message</h1>
+
             <Formik
                 validate={values => {
                     const emailRegex = /^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i
@@ -35,9 +49,10 @@ const ContactForm = ({ bucketItems }) => {
                     name: '',
                     email: '',
                     message: '',
-                    bucket: bucketItems,
+                    bucket: cleanArray,
                 }}
                 onSubmit={(values, actions) => {
+                    console.log(values)
                     fetch('/', {
                         method: 'POST',
                         headers: {
@@ -96,7 +111,6 @@ const ContactForm = ({ bucketItems }) => {
                                 )}
                             />
                         </div>
-                        {}
 
                         <button className={s.button} type="submit">
                             Send
@@ -109,3 +123,14 @@ const ContactForm = ({ bucketItems }) => {
 }
 
 export default ContactForm
+
+{
+    /* {bucketItems.map((item, index) => {
+                            return (
+                                <div>
+                                    <label>{item.item + ' ' + item.name}</label>
+                                    <input type="text" value={item.raffle} />
+                                </div>
+                            )
+                        })} */
+}

@@ -12,9 +12,9 @@ const contact = () => {
                 <Map />
                 <ContactForm
                     bucketItems={[
-                        { raffle: 10, item: 'shirt', name: 'Sceptre' },
-                        { raffle: 7, item: 'hat', name: 'Yumm' },
-                        { raffle: 5, item: 'shirt', name: 'Cowin' },
+                        { raffle: '10', item: 'shirt', name: 'Sceptre' },
+                        { raffle: '7', item: 'hat', name: 'Yumm' },
+                        { raffle: '5', item: 'shirt', name: 'Cowin' },
                     ]}
                 />
             </div>
