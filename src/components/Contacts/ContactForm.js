@@ -50,7 +50,7 @@ const ContactForm = () => {
                 initialValues={{
                     name: '',
                     email: '',
-                    message: '',
+                    phone: '',
                     bucket: cleanArray,
                 }}
                 onSubmit={(values, actions) => {

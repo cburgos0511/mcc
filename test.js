@@ -6,10 +6,9 @@ import Remove from '../../assets/svg/remove.svg'
 const Cart = () => {
     const [cartState, setCartState] = useContext(StoreContext)
     const [formState, setFormState] = useState({
-        name: '',
-        email: '',
         buckets: cartState.cartItems,
     })
+
     const [step, setStep] = useState(1)
     const isOpen = cartState.isCartOpen === true ? s.open : 'nope'
     const total =
@@ -83,19 +82,18 @@ const Cart = () => {
                         if (!values.email || !emailRegex.test(values.email)) {
                             errors.email = 'Valid Email Required'
                         }
-                        if (!values.message) {
-                            errors.message = 'Message Required'
+                        if (!values.phone) {
+                            errors.phone = 'Phone Required'
                         }
                         return errors
                     }}
                     initialValues={{
                         name: '',
                         email: '',
-                        message: '',
+                        phone: '',
                         bucket: cleanArray,
                     }}
                     onSubmit={(values, actions) => {
-                        console.log(values)
                         fetch('/', {
                             method: 'POST',
                             headers: {
@@ -196,7 +194,7 @@ const Cart = () => {
                                         }}
                                         className={s.form__wrap}
                                     >
-                                        <label htmlFor="bucket">Bucket </label>
+                                        <label htmlFor="bucket">Bucket</label>
                                         <Field
                                             name="bucket"
                                             component="textarea"
