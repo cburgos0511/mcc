@@ -10,16 +10,7 @@ const contact = () => {
             <Header />
             <div className={s.contactContainer}>
                 <Map />
-                <ContactForm
-                    bucketItems={[
-                        { raffle_item: 'Sceptre', tickets: 10 },
-                        { raffle_item: 'Yumm', tickets: 13 },
-                        { raffle_item: 'Cowin', tickets: 5 },
-                        { raffle_item: 'Buu', tickets: 15 },
-                        { raffle_item: 'Trick', tickets: 9 },
-                        { raffle_item: 'Moo', tickets: 2 },
-                    ]}
-                />
+                <ContactForm />
             </div>
         </>
     )

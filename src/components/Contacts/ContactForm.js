@@ -2,17 +2,19 @@ import React, { useState } from 'react'
 import s from './form.scss'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
-const ContactForm = ({ bucketItems }) => {
-    const [bucket, setBucket] = useState({})
-    // [
-    //     { raffle: 10, item: 'shirt', name: 'Sceptre' },
-    //     { raffle: 7, item: 'hat', name: 'Yumm' },
-    //     { raffle: 5, item: 'shirt', name: 'Cowin' },
-    // ]
+const bucketContext = [
+    { raffle_item: 'Sceptre', tickets: 10 },
+    { raffle_item: 'Yumm', tickets: 13 },
+    { raffle_item: 'Cowin', tickets: 5 },
+    { raffle_item: 'Buu', tickets: 15 },
+    { raffle_item: 'Trick', tickets: 9 },
+    { raffle_item: 'Moo', tickets: 2 },
+]
 
-    const cleanArray = bucketItems
+const ContactForm = () => {
+    const cleanArray = bucketContext
         .map((item, i) => `${item.tickets} － ${item.raffle_item}`)
-        .join('\n')
+        .join(' | ')
     console.log(cleanArray)
 
     const encode = data => {
