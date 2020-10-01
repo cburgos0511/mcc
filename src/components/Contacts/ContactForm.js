@@ -43,7 +43,7 @@ const ContactForm = () => {
                             'Content-Type': 'application/x-www-form-urlencoded',
                         },
                         body: encode({
-                            'form-name': 'contact-demo',
+                            'form-name': 'mcc-contact-form',
                             ...values,
                         }),
                     })

@@ -1,0 +1,167 @@
+@import '../../styles/config/config';
+
+.main {
+    margin: 100px 0;
+    padding: 0 1rem;
+
+    @include media-query($medium-up) {
+        margin: 200px 0;
+        padding: 0 15%;
+    }
+
+    @include media-query($large-up) {
+        padding: 0 26%;
+    }
+
+    .subtitle {
+        font-size: 24px;
+        margin: 2.5rem 0 1.5rem 0;
+        font-family: (--monserrat);
+        @include media-query($large-up) {
+            font-size: 32px;
+            margin-top: 70px;
+        }
+    }
+}
+.title {
+    margin-bottom: 2.5rem;
+    text-align: center;
+    font-size: 32px;
+    @include media-query($large-up) {
+        font-size: 50px;
+        text-align: center;
+        margin-bottom: 10rem;
+    }
+}
+
+.verseNum {
+    font-size: 14px;
+    color: var(--color-black);
+    margin-right: 5px;
+}
+
+.pdfmain {
+    margin: 50px 0;
+    padding: 0 1rem;
+    display: flex;
+    flex-direction: column;
+
+    @include media-query($medium-up) {
+        margin: 170px 0;
+        padding: 0 5%;
+    }
+
+    &__download {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        padding: 10px;
+        outline: none;
+        height: 50px;
+        border: none;
+        padding: auto;
+        color: var(--color-red);
+        text-transform: uppercase;
+        font-weight: 800;
+        letter-spacing: 1.1px;
+        margin: 0 auto;
+        border: 1px solid var(--color-red);
+        background-color: var(--color-white);
+        transition: all 250ms ease-in-out;
+        cursor: pointer;
+
+        &:hover {
+            border: 1px solid var(--color-red);
+            color: var(--color-red);
+            background-color: var(--color-black);
+        }
+    }
+
+    &__container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin: 10px 0;
+        padding: 10px;
+
+        &__doc {
+            margin: 1em 0;
+            display: flex;
+            &__wrapper {
+                position: relative;
+                &__p {
+                    position: absolute;
+                    font-size: 14px;
+                    padding: 0 24px;
+                    margin: 0;
+                    z-index: 3;
+                    top: 36px;
+                    right: 26px;
+                }
+            }
+        }
+    }
+}
+
+.rchevron {
+    position: fixed;
+    right: 10%;
+    opacity: 0;
+
+    &__right {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(3);
+        width: 20px;
+        height: 20px;
+        border: 1px solid transparent;
+        border-radius: 100px;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-bottom: 1px solid;
+            border-right: 1px solid;
+            transform: rotate(-45deg);
+            right: 6px;
+        }
+    }
+}
+
+.lchevron {
+    position: fixed;
+    left: 10%;
+    opacity: 0;
+
+    &__left {
+        box-sizing: border-box;
+        position: relative;
+        display: block;
+        transform: scale(3);
+        width: 20px;
+        height: 20px;
+        border: 1px solid transparent;
+        border-radius: 100px;
+        cursor: pointer;
+
+        &::after {
+            content: '';
+            display: block;
+            box-sizing: border-box;
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            border-bottom: 1px solid;
+            border-left: 1px solid;
+            transform: rotate(45deg);
+            left: 6px;
+            top: 4px;
+        }
+    }
+}
