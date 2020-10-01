@@ -76,7 +76,17 @@ const ContactForm = () => {
                 }}
             >
                 {() => (
-                    <Form name="mcc-contact-form" data-netlify={true}>
+                    <Form
+                        name="mcc-contact-form"
+                        data-netlify={true}
+                        data-netlify-honeypot="bot-field"
+                    >
+                        <input type="hidden" name="bot-field" />
+                        <input
+                            type="hidden"
+                            name="form-name"
+                            value="mcc-contact-form"
+                        />
                         <div className={s.form__wrap}>
                             <label htmlFor="name">Name </label>
                             <Field name="name" />
@@ -135,14 +145,3 @@ const ContactForm = () => {
 }
 
 export default ContactForm
-
-{
-    /* {bucketItems.map((item, index) => {
-                            return (
-                                <div>
-                                    <label>{item.item + ' ' + item.name}</label>
-                                    <input type="text" value={item.raffle} />
-                                </div>
-                            )
-                        })} */
-}
