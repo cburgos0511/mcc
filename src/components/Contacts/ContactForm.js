@@ -12,7 +12,7 @@ const ContactForm = ({ bucketItems }) => {
 
     const cleanArray = bucketItems
         .map((item, i) => `${item.raffle} ${item.item} from ${item.name}`)
-        .join('\n')
+        .join('－')
     console.log(cleanArray)
 
     const encode = data => {
@@ -111,7 +111,10 @@ const ContactForm = ({ bucketItems }) => {
                                 )}
                             />
                         </div>
-
+                        <div style={{ opacity: 0 }} className={s.form__wrap}>
+                            <label htmlFor="bucket">Bucket </label>
+                            <Field name="bucket" />
+                        </div>
                         <button className={s.button} type="submit">
                             Send
                         </button>
