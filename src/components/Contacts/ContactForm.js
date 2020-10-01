@@ -2,7 +2,7 @@ import React from 'react'
 import s from './form.scss'
 import { Formik, Form, Field, ErrorMessage } from 'formik'
 
-const ContactForm = () => {
+const ContactForm = ({ bucketItems }) => {
     const encode = data => {
         return Object.keys(data)
             .map(
@@ -35,6 +35,7 @@ const ContactForm = () => {
                     name: '',
                     email: '',
                     message: '',
+                    bucket: bucketItems,
                 }}
                 onSubmit={(values, actions) => {
                     fetch('/', {
@@ -95,6 +96,7 @@ const ContactForm = () => {
                                 )}
                             />
                         </div>
+                        {}
 
                         <button className={s.button} type="submit">
                             Send
